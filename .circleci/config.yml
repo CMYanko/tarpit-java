@@ -46,6 +46,7 @@ jobs:
             - run:
                 name: Check SAST Analysis
                 command: |
+                    curl https://www.shiftleft.io/download/sl-latest-linux-x64.tar.gz > /tmp/sl.tar.gz && sudo tar -C /usr/local/bin -xzf /tmp/sl.tar.gz
                     PR_USER=$(echo $CIRCLE_PULL_REQUEST | cut -d '/' -f4)
                     PR_REPO=$(echo $CIRCLE_PULL_REQUEST | cut -d '/' -f5) 
                     PR_NUMBER=$(echo $CIRCLE_PULL_REQUEST | cut -d '/' -f7) 
