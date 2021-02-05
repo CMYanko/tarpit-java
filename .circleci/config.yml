@@ -65,7 +65,7 @@ workflows:
                 - /feature-.*/
       - sl_build_rules:
           requires:
-            - build
+            - maven_build_and_SL_scan:
           filters:
             branches:
               ignore: 
