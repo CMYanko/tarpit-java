@@ -1,9 +1,12 @@
+# Build rules compares PR branch check-analysis scan against 
+# the main branch and break if anything new is found
 source:
   branch: main
 build_rules:
-  - id: allow-zero-high-impact
+  - id: no-new-high-vulns-or-secrets
     finding_types:
       - vuln
+      - secrets
     severity:
       - SEVERITY_HIGH_IMPACT
 #  - id: build-rule-enchalada
