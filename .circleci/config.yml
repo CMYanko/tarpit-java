@@ -7,7 +7,7 @@ references:
     attach_workspace:
       at: *workspace_root
 jobs:
-    build:
+    maven build and SL scan:
         docker:
             - image: circleci/openjdk:8-jdk-node
         working_directory: ~/repo
@@ -37,7 +37,7 @@ jobs:
                     curl https://www.shiftleft.io/download/sl-latest-linux-x64.tar.gz > /tmp/sl.tar.gz && sudo tar -C /usr/local/bin -xzf /tmp/sl.tar.gz
                     sl analyze --wait --tag branch=$CIRCLE_BRANCH --policy 639070ed-7aad-4e53-bd5c-b97190308dc2/first_policy:latest --app tarpit-java-circle /home/circleci/repo/target/tarpit-java.war
 
-    test:
+    sl build rules:
         docker:
             - image: circleci/openjdk:8-jdk-node
         working_directory: ~/repo   
@@ -57,13 +57,13 @@ workflows:
   version: 2
   build-test:
     jobs:
-      - build:
+      - maven build and SL scan:
           filters:
             branches:
               ignore:
                 - develop
                 - /feature-.*/
-      - test:
+      - sl build rules:
           requires:
             - build
           filters:
