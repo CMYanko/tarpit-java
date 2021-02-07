@@ -30,15 +30,13 @@ WHEN CONCLUSION xss-to-header => EMIT {
      category: "a7-XSS",
      description: "Data from HTTP request parameters is stored in HTTP headers. Unless the string is validated, this may result in a XSS attack.
 
-
-## Countermeasures
-eader
-This vulnerability can be prevented by using input sanitization/validation techniques (e.g., whitelisting) on the HTTP data before using it inside another HTTP header.
-
 ## Customer Specific Information
 
 I can point my devs to specific internal resources for this specific finding type xss-to-header
 ...or I could have adjusted the cvss score from 8.0 to something else
+
+## Countermeasures
+This vulnerability can be prevented by using input sanitization/validation techniques (e.g., whitelisting) on the HTTP data before using it inside another HTTP header.
 
 ## Additional information
 
@@ -57,15 +55,15 @@ WHEN CONCLUSION xss-to-html => EMIT {
      category: "a7-XSS",
      description: "Data from HTTP request parameters is used in HTML or session information. Unless the string is validated, this may result in a XSS attack.
 
+## Internal help
+
+I can point my devs to specific internal resources for this specific finding type xss-to-html
+...or I could have adjusted the cvss score from 8.0 to something else
 
 ## Countermeasures
 
 This vulnerability can be prevented by using input sanitization/validation techniques (e.g., whitelisting) on the HTTP data before using it inside another HTTP header.
 
-## Internal help
-
-I can point my devs to specific internal resources for this specific finding type xss-to-html
-...or I could have adjusted the cvss score from 8.0 to something else
 
 ## Additional information
 
