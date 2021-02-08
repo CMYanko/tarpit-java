@@ -35,7 +35,7 @@ jobs:
                 command: |
                     mvn clean package
                     curl https://www.shiftleft.io/download/sl-latest-linux-x64.tar.gz > /tmp/sl.tar.gz && sudo tar -C /usr/local/bin -xzf /tmp/sl.tar.gz
-                    sl analyze --wait --tag branch=$CIRCLE_BRANCH --policy 639070ed-7aad-4e53-bd5c-b97190308dc2/first_policy:latest --app tarpit-java-circle /home/circleci/repo/target/tarpit-java.war
+                    sl analyze --wait --tag branch=$CIRCLE_BRANCH --policy 639070ed-7aad-4e53-bd5c-b97190308dc2/second_policy:latest --app tarpit-java-circle3 /home/circleci/repo/target/tarpit-java.war
 
     sl_build_rules:
         docker:
@@ -51,7 +51,7 @@ jobs:
                     PR_USER=$(echo $CIRCLE_PULL_REQUEST | cut -d '/' -f4)
                     PR_REPO=$(echo $CIRCLE_PULL_REQUEST | cut -d '/' -f5) 
                     PR_NUMBER=$(echo $CIRCLE_PULL_REQUEST | cut -d '/' -f7) 
-                    sl check-analysis --app tarpit-java-circle --report  --target=tag.branch=$CIRCLE_BRANCH --github-pr-user=$PR_USER --github-pr-repo=$PR_REPO --github-pr-number=$PR_NUMBER --github-token=$GH_AUTH_TOKEN
+                    sl check-analysis --app tarpit-java-circle3 --report  --target=tag.branch=$CIRCLE_BRANCH --github-pr-user=$PR_USER --github-pr-repo=$PR_REPO --github-pr-number=$PR_NUMBER --github-token=$GH_AUTH_TOKEN
 
 
 workflows:
