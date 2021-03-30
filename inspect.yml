@@ -1,3 +1,9 @@
+inspect:
+  - app:
+      language: JAVA
+      name: tarpit-java
+      modify-findings:
+        - my_modification_rule
 finding-modifications:
   my_modification_rule_name:
     filter:
