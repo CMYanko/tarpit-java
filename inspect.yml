@@ -1,0 +1,18 @@
+finding-modifications:
+  my_modification_rule_name:
+    filter:
+      category:
+        - Sensitive Data Leak
+      id:
+        - 97
+      type:
+        - vuln
+      severity:
+        - info
+        - moderate
+        - critical
+    tags:
+      - key: cvss_score
+        value: 5
+      - key: severity
+        value: info
