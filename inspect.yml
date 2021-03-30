@@ -7,7 +7,7 @@ inspect:
   - default:
       policy: io.shiftleft/default
 finding-modifications:
-  my_modification_rule_name:
+  my_modification_rule:
     filter:
       category:
         - Sensitive Data Leak
