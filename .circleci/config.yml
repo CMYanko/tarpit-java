@@ -36,7 +36,7 @@ jobs:
                     mvn clean package
                     curl https://www.shiftleft.io/download/sl-latest-linux-x64.tar.gz > /tmp/sl.tar.gz && sudo tar -C /usr/local/bin -xzf /tmp/sl.tar.gz
                     sl check-environment --jvm
-                    sl analyze --wait --tag branch=$CIRCLE_BRANCH --policy 639070ed-7aad-4e53-bd5c-b97190308dc2/first_policy:latest --sca --app tarpit-java-circle /home/circleci/repo/target/tarpit-java.war
+                    sl analyze --wait --tag branch=$CIRCLE_BRANCH --policy 639070ed-7aad-4e53-bd5c-b97190308dc2/first_policy:latest --sca --cpg --app tarpit-java-circle /home/circleci/repo/target/tarpit-java.war
 
     sl_build_rules:
         docker:

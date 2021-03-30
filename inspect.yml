@@ -1,5 +1,14 @@
+inspect:
+  - app:
+      language: JAVA
+      name: tarpit-java
+      policy: 639070ed-7aad-4e53-bd5c-b97190308dc2/first_policy:latest
+      modify-findings:
+        - my_modification_rule
+  - default:
+      policy: io.shiftleft/default
 finding-modifications:
-  my_modification_rule_name:
+  my_modification_rule:
     filter:
       category:
         - Sensitive Data Leak
@@ -13,6 +22,6 @@ finding-modifications:
         - critical
     tags:
       - key: cvss_score
-        value: 5
+        value: 3
       - key: severity
         value: info
