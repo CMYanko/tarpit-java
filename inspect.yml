@@ -2,6 +2,7 @@ inspect:
   - app:
       language: JAVA
       name: tarpit-java
+      policy: 639070ed-7aad-4e53-bd5c-b97190308dc2/first_policy:latest
       modify-findings:
         - my_modification_rule
   - default:
