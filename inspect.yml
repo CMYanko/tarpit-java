@@ -4,6 +4,8 @@ inspect:
       name: tarpit-java
       modify-findings:
         - my_modification_rule
+  - default:
+      policy: io.shiftleft/default
 finding-modifications:
   my_modification_rule_name:
     filter:
@@ -19,6 +21,6 @@ finding-modifications:
         - critical
     tags:
       - key: cvss_score
-        value: 5
+        value: 3
       - key: severity
         value: info
