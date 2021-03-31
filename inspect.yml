@@ -26,5 +26,4 @@ finding-modifications:
         value: 3
       - key: severity
         value: info
-      - key: reason
-        value: appsec_approved
+        
