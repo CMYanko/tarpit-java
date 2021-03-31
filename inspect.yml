@@ -1,10 +1,12 @@
 inspect:
 - app:
-    name: tarpit-java-circle
+    language: JAVA
+    name: tarpit-java
+    policy: 639070ed-7aad-4e53-bd5c-b97190308dc2/first_policy:latest
     modify-findings:
-      - downgrade_sdl
+      - sdl_to_info
 finding-modifications:
-  downgrade_sdl:
+  sdl_to_info:
     # Use filter to specify the category
     filter:
       category:
