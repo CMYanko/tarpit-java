@@ -9,7 +9,6 @@ inspect:
     policy: io.shiftleft/default
 finding-modifications:
   sdl_to_info:
-    # Use filter to specify the category
     filter:
       category:
         - Sensitive Data Leak
