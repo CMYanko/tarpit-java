@@ -19,7 +19,6 @@ finding-modifications:
       severity:
         - info
         - moderate
-        - critical
     tags:
       - key: cvss_score
         value: 3
