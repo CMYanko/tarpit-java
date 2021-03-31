@@ -12,10 +12,6 @@ finding-modifications:
     filter:
       category:
         - Sensitive Data Leak
-      id:
-        - 97
-      type:
-        - vuln
     tags:
       - key: cvss_score
         value: 3
