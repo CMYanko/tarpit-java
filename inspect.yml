@@ -1,12 +1,12 @@
 inspect:
   - app:
-    language: JAVA
-    name: tarpit-java-circle
-    policy: 639070ed-7aad-4e53-bd5c-b97190308dc2/first_policy:latest
-    modify-findings:
-      - sdl_to_info
+      language: JAVA
+      name: tarpit-java-circle
+      policy: 639070ed-7aad-4e53-bd5c-b97190308dc2/first_policy:latest
+      modify-findings:
+        - sdl_to_info
   - default:
-    policy: io.shiftleft/default
+      policy: io.shiftleft/default
 finding-modifications:
   sdl_to_info:
     filter:
