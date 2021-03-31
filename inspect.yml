@@ -16,9 +16,6 @@ finding-modifications:
         - 97
       type:
         - vuln
-      severity:
-        - moderate
-        - critical
     tags:
       - key: cvss_score
         value: 3
