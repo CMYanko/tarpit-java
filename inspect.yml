@@ -21,6 +21,7 @@ finding-modifications:
       type:
         - vuln
       severity:
+        - info
         - moderate
         - critical
     tags:
