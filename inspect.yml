@@ -14,13 +14,13 @@ finding-modifications:
     # Specify the value for the tags, such as cvss_score or severity, that you would like to use
     # Optionally, you can add a custom tag (e.g, a tag indicating the reason a vuln is
     # marked as such)
-    id:
-      - 97
-    type:
-      - vuln
-    severity:
-      - moderate
-      - critical
+      id:
+        - 97
+      type:
+        - vuln
+      severity:
+        - moderate
+        - critical
     tags:
       - key: cvss_score
         value: 3
